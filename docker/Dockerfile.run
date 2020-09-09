@@ -15,5 +15,5 @@ RUN pip3 install --no-cache-dir -e .
 
 RUN mkdir logs && chown -R indy:indy logs && chmod -R ug+rw logs
 
-ENTRYPOINT ["/bin/bash", "-c", "aca-py \"$@\"", "--", "start", "-it", "http", "0.0.0.0", "10000", "-ot", "http", "--admin", "0.0.0.0", "5000", "-e", "http://52.226.2.217/", "--wallet-type", "indy", "--seed", "000000000000000000000000000Agent", "--genesis-url", "http://test.bcovrin.vonx.io/genesis", "--admin-insecure-mode", "--log-level", "debug"]
+ENTRYPOINT ["/bin/bash", "-c", "aca-py \"$@\"", "--", "start", "-it", "http", "0.0.0.0", "10000", "-ot", "http", "--admin", "0.0.0.0", "5000", "--wallet-type", "indy", "--seed", "000000000000000000000000000Agent", "--genesis-url", "http://test.bcovrin.vonx.io/genesis", "--admin-insecure-mode", "--log-level", "debug"]
 
